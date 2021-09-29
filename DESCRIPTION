@@ -1,15 +1,16 @@
 Package: biocompute
 Type: Package
 Title: Create and Manipulate BioCompute Objects
-Version: 1.0.4
+Version: 1.0.6
 Authors@R: c(
-    person("Soner", "Koc", email = "soner.koc@sevenbridges.com", role = c("aut", "cre")),
-    person("Nan", "Xiao", role = c("aut")),
+    person("Jeffrey", "Grover", email = "jeffrey.grover@sevenbridges.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6246-1767")),
+    person("Soner", "Koc", email = "soner.koc@sevenbridges.com", role = c("aut"), comment = c(ORCID = "0000-0002-0772-6600")),
+    person("Nan", "Xiao", role = c("aut"), comment = c(ORCID = "0000-0002-0250-5673")),
     person("Dennis", "Dean", email = "dennis.dean@sevenbridges.com", role = c("aut"),
            comment = c(ORCID = "0000-0002-7621-9717")),
     person("Seven Bridges Genomics", role = c("cph", "fnd"))
     )
-Maintainer: Soner Koc <soner.koc@sevenbridges.com>
+Maintainer: Jeffrey Grover <jeffrey.grover@sevenbridges.com>
 Description: Tools to create, validate, and export BioCompute Objects
     described in King et al. (2019) <doi:10.17605/osf.io/h59uh>.
     Users can encode information in data frames, and compose
@@ -23,16 +24,16 @@ URL: https://sbg.github.io/biocompute/,
         https://github.com/sbg/biocompute
 BugReports: https://github.com/sbg/biocompute/issues
 Encoding: UTF-8
-LazyData: true
 Imports: methods, jsonlite, yaml, digest, uuid, jsonvalidate, httr,
         curl, crayon, cli, stringr, magrittr, rmarkdown
 Suggests: knitr
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2020-10-15 04:54:49 UTC; c02sn03cfvh6
-Author: Soner Koc [aut, cre],
-  Nan Xiao [aut],
+Packaged: 2021-09-28 21:29:15 UTC; c02ck1a7lvdm
+Author: Jeffrey Grover [aut, cre] (<https://orcid.org/0000-0001-6246-1767>),
+  Soner Koc [aut] (<https://orcid.org/0000-0002-0772-6600>),
+  Nan Xiao [aut] (<https://orcid.org/0000-0002-0250-5673>),
   Dennis Dean [aut] (<https://orcid.org/0000-0002-7621-9717>),
   Seven Bridges Genomics [cph, fnd]
 Repository: CRAN
-Date/Publication: 2020-10-16 07:20:02 UTC
+Date/Publication: 2021-09-29 07:10:13 UTC
