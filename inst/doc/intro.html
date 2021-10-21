@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2021-09-28" />
+<meta name="date" content="2021-10-21" />
 
 <title>Create and Manipulate BioCompute Objects with R</title>
 
@@ -249,7 +249,7 @@ pre code {
 
 
 <h1 class="title toc-ignore">Create and Manipulate BioCompute Objects with R</h1>
-<h4 class="date">2021-09-28</h4>
+<h4 class="date">2021-10-21</h4>
 
 </div>
 
@@ -277,10 +277,10 @@ pre code {
 <p>The function <code>biocompute::versions()</code> tells the current and all available versions of the BioCompute Object specification supported in this package:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>biocompute<span class="sc">::</span><span class="fu">versions</span>()</span></code></pre></div>
 <pre><code>$current
-[1] &quot;1.3.0&quot;
+[1] &quot;1.4.2&quot;
 
 $available
-[1] &quot;1.3.0&quot;</code></pre>
+[1] &quot;1.4.2&quot;</code></pre>
 </div>
 <div id="compose-biocompute-object-domains" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Compose BioCompute Object Domains</h1>
@@ -405,9 +405,9 @@ $available
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compose_io</span>(), <span class="fu">compose_error</span>()</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> <span class="fu">convert_json</span>()</span></code></pre></div>
 <pre><code>{
-  &quot;bco_spec_version&quot;: &quot;https://w3id.org/biocompute/1.3.0/&quot;,
-  &quot;bco_id&quot;: &quot;https://biocompute.sbgenomics.com/bco/f3c98454-eced-44c5-9897-3dae8244d87a&quot;,
-  &quot;checksum&quot;: &quot;d743d2f1407707eadcc2a700f7c506f13deddf6bf9c8d9d888e9087cc67a1c8f&quot;,
+  &quot;spec_version&quot;: &quot;https://w3id.org/biocompute/1.4.2/&quot;,
+  &quot;object_id&quot;: &quot;https://biocompute.sbgenomics.com/bco/046c75b0-3bad-432a-953e-b1988c4c36f1&quot;,
+  &quot;etag&quot;: &quot;496f1a5c9693811984714b0647914929c5bc29c8e7a18ad2a0276f82b11a42ce&quot;,
   &quot;provenance_domain&quot;: {
     &quot;name&quot;: [],
     &quot;version&quot;: [],
@@ -428,7 +428,9 @@ $available
   &quot;description_domain&quot;: {
     &quot;keywords&quot;: [],
     &quot;xref&quot;: [],
-    &quot;platform&quot;: &quot;Seven Bridges Platform&quot;,
+    &quot;platform&quot;: [
+      &quot;Seven Bridges Platform&quot;
+    ],
     &quot;pipeline_steps&quot;: []
   },
   &quot;execution_domain&quot;: {
@@ -463,9 +465,9 @@ $available
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>bco <span class="sc">%&gt;%</span> <span class="fu">validate_checksum</span>()</span></code></pre></div>
 <pre><code>── Loading BioCompute Object ───────────────────────────────────────────────────
 ── Validating Checksum ─────────────────────────────────────────────────────────
-Documented checksum: 6323142e7d0888d5f73ec22efeced416f9ead8293e9095800df4559cf8f836d7
-Calculated checksum: 6323142e7d0888d5f73ec22efeced416f9ead8293e9095800df4559cf8f836d7
-Documented and calculated checksum matched.</code></pre>
+Documented checksum: d18deb41a97a3108e743231af5fec0055dac321b945a569ca58bf33503ec526b
+Calculated checksum: c722ea929af19b3b80e899017bde78602b220d0f88a4a131411fe23533c3c999
+Documented and calculated checksum did NOT match.Due to the minor differences in JSON serialization,this could be a false positive. Please double check.</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bco <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">&quot;.json&quot;</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_example</span>(<span class="st">&quot;HCV1a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">convert_json</span>() <span class="sc">%&gt;%</span></span>
@@ -474,8 +476,8 @@ Documented and calculated checksum matched.</code></pre>
 <pre><code>── 0: Validating BioCompute Object ─────────────────────────────────────────────
 [1] FALSE
 attr(,&quot;errors&quot;)
-                                 field           message
-1 data.extension_domain.fhir_extension is the wrong type
+                  field           message
+1 data.extension_domain is the wrong type
 
 ── 1: Validating Provenance Domain ─────────────────────────────────────────────
 [1] FALSE
@@ -491,20 +493,7 @@ attr(,&quot;errors&quot;)
 ── 2: Validating Usability Domain ──────────────────────────────────────────────
 [1] TRUE
 
-── 3.1: Validating Extension Domain (FHIR Extension) ───────────────────────────
-[1] FALSE
-attr(,&quot;errors&quot;)
-                  field           message
-1 data.fhir_resources.0 is the wrong type
-2 data.fhir_resources.1 is the wrong type
-3 data.fhir_resources.2 is the wrong type
-4 data.fhir_resources.3 is the wrong type
-5 data.fhir_resources.4 is the wrong type
-
-── 3.2: Validating Extension Domain (SCM Extension) ────────────────────────────
-[1] TRUE
-
-── 4: Validating Description Domain ────────────────────────────────────────────
+── 3: Validating Description Domain ────────────────────────────────────────────
 [1] FALSE
 attr(,&quot;errors&quot;)
                               field                  message
@@ -515,25 +504,23 @@ attr(,&quot;errors&quot;)
 5           data.xref.2.access_time must be date-time format
 6                   data.xref.3.ids        is the wrong type
 7           data.xref.3.access_time must be date-time format
-8                     data.platform        is the wrong type
-9 data.pipeline_steps.0.step_number        is the wrong type
+8 data.pipeline_steps.0.step_number        is the wrong type
 
-── 5: Validating Execution Domain ──────────────────────────────────────────────
+── 4: Validating Execution Domain ──────────────────────────────────────────────
 [1] FALSE
 attr(,&quot;errors&quot;)
                            field           message
-1                    data.script is the wrong type
-2 data.external_data_endpoints.0 is the wrong type
-3 data.external_data_endpoints.1 is the wrong type
-4 data.external_data_endpoints.2 is the wrong type
+1 data.external_data_endpoints.0 is the wrong type
+2 data.external_data_endpoints.1 is the wrong type
+3 data.external_data_endpoints.2 is the wrong type
 
-── 6: Validating Parametric Domain ─────────────────────────────────────────────
+── 5: Validating Parametric Domain ─────────────────────────────────────────────
 [1] TRUE
 
-── 7: Validating I/O Domain ────────────────────────────────────────────────────
+── 6: Validating I/O Domain ────────────────────────────────────────────────────
 [1] TRUE
 
-── 8: Validating Error Domain ──────────────────────────────────────────────────
+── 7: Validating Error Domain ──────────────────────────────────────────────────
 [1] TRUE</code></pre>
 </div>
 <div id="export-biocompute-objects" class="section level1" number="7">

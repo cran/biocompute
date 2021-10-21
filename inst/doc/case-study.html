@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2021-09-28" />
+<meta name="date" content="2021-10-21" />
 
 <title>Authoring Biocompute Objects with R: A Case Study</title>
 
@@ -325,7 +325,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Authoring Biocompute Objects with R: A Case Study</h1>
-<h4 class="date">2021-09-28</h4>
+<h4 class="date">2021-10-21</h4>
 
 </div>
 
@@ -684,7 +684,9 @@ div.tocify {
       &quot;access_time&quot;: &quot;2017-01-23T09:40:17-0500&quot;
     }
   ],
-  &quot;platform&quot;: &quot;Seven Bridges Platform&quot;,
+  &quot;platform&quot;: [
+    &quot;Seven Bridges Platform&quot;
+  ],
   &quot;pipeline_steps&quot;: [
     {
       &quot;step_number&quot;: &quot;1&quot;,
@@ -789,7 +791,9 @@ div.tocify {
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>execution <span class="sc">%&gt;%</span> <span class="fu">convert_json</span>()</span></code></pre></div>
 <pre><code>{
-  &quot;script&quot;: &quot;https://example.com/workflows/antiviral_resistance_detection_hive.py&quot;,
+  &quot;script&quot;: [
+    &quot;https://example.com/workflows/antiviral_resistance_detection_hive.py&quot;
+  ],
   &quot;script_driver&quot;: &quot;shell&quot;,
   &quot;software_prerequisites&quot;: [
     {
@@ -994,7 +998,7 @@ div.tocify {
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  execution, parametric, io, error</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>tlf <span class="sc">%&gt;%</span> <span class="fu">convert_json</span>()</span></code></pre></div>
-<pre><code>[&quot;https://w3id.org/biocompute/1.3.0/&quot;, &quot;https://biocompute.sbgenomics.com/bco/15122b93-7111-4e97-a1c8-50ea7e5e8f11&quot;, &quot;6323142e7d0888d5f73ec22efeced416f9ead8293e9095800df4559cf8f836d7&quot;] </code></pre>
+<pre><code>[&quot;https://w3id.org/biocompute/1.4.2/&quot;, &quot;https://biocompute.sbgenomics.com/bco/fb1724f3-0c8c-4d56-8634-200185f325f7&quot;, &quot;d18deb41a97a3108e743231af5fec0055dac321b945a569ca58bf33503ec526b&quot;] </code></pre>
 </div>
 <div id="complete-bco" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Complete BCO</h1>
@@ -1004,9 +1008,9 @@ div.tocify {
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>bco <span class="sc">%&gt;%</span> <span class="fu">convert_json</span>()</span></code></pre></div>
 <pre><code>{
-  &quot;bco_spec_version&quot;: &quot;https://w3id.org/biocompute/1.3.0/&quot;,
-  &quot;bco_id&quot;: &quot;https://biocompute.sbgenomics.com/bco/15122b93-7111-4e97-a1c8-50ea7e5e8f11&quot;,
-  &quot;checksum&quot;: &quot;6323142e7d0888d5f73ec22efeced416f9ead8293e9095800df4559cf8f836d7&quot;,
+  &quot;spec_version&quot;: &quot;https://w3id.org/biocompute/1.4.2/&quot;,
+  &quot;object_id&quot;: &quot;https://biocompute.sbgenomics.com/bco/fb1724f3-0c8c-4d56-8634-200185f325f7&quot;,
+  &quot;etag&quot;: &quot;d18deb41a97a3108e743231af5fec0055dac321b945a569ca58bf33503ec526b&quot;,
   &quot;provenance_domain&quot;: {
     &quot;name&quot;: &quot;HCV1a ledipasvir resistance SNP detection&quot;,
     &quot;version&quot;: &quot;1.0.0&quot;,
@@ -1137,7 +1141,9 @@ div.tocify {
         &quot;access_time&quot;: &quot;2017-01-23T09:40:17-0500&quot;
       }
     ],
-    &quot;platform&quot;: &quot;Seven Bridges Platform&quot;,
+    &quot;platform&quot;: [
+      &quot;Seven Bridges Platform&quot;
+    ],
     &quot;pipeline_steps&quot;: [
       {
         &quot;step_number&quot;: &quot;1&quot;,
@@ -1205,7 +1211,9 @@ div.tocify {
     ]
   },
   &quot;execution_domain&quot;: {
-    &quot;script&quot;: &quot;https://example.com/workflows/antiviral_resistance_detection_hive.py&quot;,
+    &quot;script&quot;: [
+      &quot;https://example.com/workflows/antiviral_resistance_detection_hive.py&quot;
+    ],
     &quot;script_driver&quot;: &quot;shell&quot;,
     &quot;software_prerequisites&quot;: [
       {
