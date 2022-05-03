@@ -1,6 +1,6 @@
-ae42fb7cd14dfb5e5e97034402b54192 *DESCRIPTION
+ce4749ebb92f008b11888eb2289617e0 *DESCRIPTION
 00ebad8e7a9c68b9c7d0dcfbc6049f31 *NAMESPACE
-31a67fce8e0a83a342ea5005cce51500 *NEWS.md
+824e811abaf343989a5f8ad77a5978c3 *NEWS.md
 1d884af4429a6e30f9868acb2b0f678f *R/api-core.R
 957d7b2c592b1c7f98200937bb41edc3 *R/api-interface.R
 ab70df3c3c0f16ff682eb003f0160eac *R/api-status-code.R
@@ -32,7 +32,7 @@ a5c6894705e5d5529de42a5ea1045a39 *R/validate-checksum.R
 44743fa56ca8b043ad0e110d8919f77a *R/validate-schema.R
 27f527c88ee692df67bbf2c2a09203e1 *R/version.R
 696fd1df4620d3fe7603645ac7976839 *README.md
-348554643901010727d0068fb7d49857 *build/vignette.rds
+9c7a83d066856f47f6bacc7e35ca7104 *build/vignette.rds
 e073d3223c59ecf5e1f2b5357036b521 *inst/bco/HCV1a.json
 e6cdd5d872e76c16ac90a33495783271 *inst/bco/HIVE_metagenomics.json
 c1892564a42fd7c418f32df800cc2e94 *inst/bco/README
@@ -40,10 +40,10 @@ a968de3125dae6cec3aa20e6db5c48d0 *inst/bco/UVP.json
 a5b60a39d95e4e5e8c95ed4791ff384f *inst/bco/glycosylation-sites-UniCarbKB.json
 575d3f13820923a2a1dea5b94ec02979 *inst/doc/case-study.R
 aa814c77b6f1b1e8266afd2c78a8d652 *inst/doc/case-study.Rmd
-276740c1e40f9801c1c41efcc5d9842f *inst/doc/case-study.html
+34cc78187ca6c0ea56f1be190957bc4d *inst/doc/case-study.html
 83f163c6661c2c3d104e06e8ce2f04e9 *inst/doc/intro.R
 4af417640250bf452c0f01b26c9631a0 *inst/doc/intro.Rmd
-228df24c1fe340dbc6d0d719cc0e986d *inst/doc/intro.html
+b00d1027e207aa0f119fb9ef3b32621a *inst/doc/intro.html
 560389d832a52741297cc4bf78f4c3ae *inst/schemas/1.3.0-alpha/README.MD
 a52be98b8c979e1390bbc7373173901f *inst/schemas/1.3.0-alpha/biocomputeobject.json
 8e310451944bb0e514b904f2d9f98870 *inst/schemas/1.3.0-alpha/description_domain.json
@@ -68,7 +68,7 @@ de5f32e8bcad89d65c5bb0e25c76038c *inst/schemas/1.4.2/parametric_domain.json
 0a445dad330ad0daea32f1c9e0651dfe *inst/schemas/1.4.2/provenance_domain.json
 c580b1e2fcd23c6a8f5e932e28a69fa0 *inst/schemas/1.4.2/usability_domain.json
 79a8a40d95b5f705b3d02f821a3255f6 *inst/templates/export.Rmd
-558234c2aef6ac759821590f8ceca115 *man/biocompute-package.Rd
+ddbb9fe1baa55057b44caa5b644940d6 *man/biocompute-package.Rd
 1b228897ebac2e9fecc87a831736fcec *man/compose.Rd
 5223d59c045badbedae5846ef143a871 *man/compose_description.Rd
 a6432fb2df9cc96e97ddcb30da50dfec *man/compose_error.Rd
